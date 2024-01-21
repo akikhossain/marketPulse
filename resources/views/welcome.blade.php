@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Hello Market Pulse</h1>
+    <h1>Hello Market Pulse ...This is a user friendly E-commerce project</h1>
 </body>
 
 </html>
