@@ -1,4 +1,5 @@
 <footer class="footer">
+
                 <div class="container footer--flex">
                     <div class="footer-start">
                         <p>2024 © MarketPulse - <a href="https://themewagon.github.io/elegant/elegant-dashboard.com" target="_blank" rel="noopener noreferrer">elegant-dashboard.com</a></p><br>
