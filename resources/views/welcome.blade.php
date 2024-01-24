@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Eshop - eCommerce HTML5 Template.</title>
+    <title>MarketPulse</title>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
 
@@ -17,6 +17,8 @@
         href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
         rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://wpthemesgrid.com/themes/free/eshop/css/bootstrap.css">
 
@@ -41,38 +43,26 @@
     <link rel="stylesheet" href="https://wpthemesgrid.com/themes/free/eshop/css/reset.css">
     <link rel="stylesheet" href="https://wpthemesgrid.com/themes/free/eshop/style.css">
     <link rel="stylesheet" href="https://wpthemesgrid.com/themes/free/eshop/css/responsive.css">
+
+    <style>
+        .color {
+            color: #F7941D
+        }
+    </style>
 </head>
 
 <body class="js">
 
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div class="preloader-inner">
             <div class="preloader-icon">
                 <span></span>
                 <span></span>
             </div>
         </div>
-    </div>
-
-
-    <ul class="pro-features">
-        <a class="get-pro" href="#">Get Pro</a>
-        <li class="title">Pro Version Features</li>
-        <li>4+ premade home pages</li>
-        <li>19+ html pages</li>
-        <li>Color Plate With 12+ Colors</li>
-        <li>Sticky Header / Sticky Filters</li>
-        <li>Quick view / Product Countdown</li>
-        <div class="button">
-            <a href="https://wpthemesgrid.com/downloads/eshop-ecommerce-html5-template" target="_blank" class="btn">Buy
-                Pro Version</a>
-            <a href="https://wpthemesgrid.com/downloads/eshop-ecommerce-html5-template" target="_blank" class="btn">View
-                Details</a>
-        </div>
-    </ul>
+    </div> --}}
 
     <header class="header shop">
-
         <div class="topbar">
             <div class="container">
                 <div class="row">
@@ -80,22 +70,22 @@
 
                         <div class="top-left">
                             <ul class="list-main">
-                                <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                                <li><i class="ti-email"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="9deee8ededf2efe9ddeef5f2edf5e8ffb3fef2f0">[email&#160;protected]</a>
+                                <li><i class="fa-solid fa-phone-volume"></i>+8801701476579</li>
+                                <li><i class="fa-regular fa-envelope"></i><a href=""
+                                        class="fw-medium ">support@marketpulse.com</a>
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                     <div class="col-lg-7 col-md-12 col-12">
 
                         <div class="right-content">
                             <ul class="list-main">
-                                <li><i class="ti-location-pin"></i> Store location</li>
-                                <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                                <li><i class="ti-user"></i> <a href="#">My account</a></li>
-                                <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+                                <li><i class="fa-solid fa-location-dot"></i>Store location</li>
+                                <li><i class="fa-regular fa-clock"></i><a href="#">Daily deal</a></li>
+                                <li><i class="fa-regular fa-user"></i><a href="#">My account</a></li>
+                                <li><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><a
+                                        href="login.html#">Login</a></li>
                             </ul>
                         </div>
 
@@ -110,20 +100,20 @@
                     <div class="col-lg-2 col-md-2 col-12">
 
                         <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                            <a href="" class="fw-bold fs-4 ">Market<span class="fs-1 fw-bold  color">Pulse</span></a>
                         </div>
 
 
-                        <div class="search-top">
+                        <div class=" search-top">
                             <div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
 
                             <div class="search-top">
                                 <form class="search-form">
                                     <input type="text" placeholder="Search here..." name="search">
-                                    <button value="search" type="submit"><i class="ti-search"></i></button>
+                                    <button value="search" type="submit"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
                                 </form>
                             </div>
-
                         </div>
 
                         <div class="mobile-nav"></div>
@@ -155,7 +145,7 @@
                                         aria-hidden="true"></i></a>
                             </div>
                             <div class="sinlge-bar shopping">
-                                <a href="#" class="single-icon"><i class="ti-bag"></i> <span
+                                <a href="#" class="single-icon"><i class="fa-solid fa-cart-shopping"></i> <span
                                         class="total-count">2</span></a>
 
                                 <div class="shopping-item">
@@ -277,10 +267,10 @@
                                     <div class="navbar-collapse">
                                         <div class="nav-inner">
                                             <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="#">Home</a></li>
+                                                <li class=""><a href="#">Home</a></li>
                                                 <li><a href="#">Product</a></li>
                                                 <li><a href="#">Service</a></li>
-                                                <li><a href="#">Shop<i class="ti-angle-down"></i><span
+                                                <li><a href="#">Shop<i class="fa-solid fa-angle-down"></i><span
                                                             class="new">New</span></a>
                                                     <ul class="dropdown">
                                                         <li><a href="cart.html">Cart</a></li>
@@ -288,7 +278,7 @@
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Pages</a></li>
-                                                <li><a href="#">Blog<i class="ti-angle-down"></i></a>
+                                                <li><a href="#">Blog<i class="fa-solid fa-angle-down"></i></a>
                                                     <ul class="dropdown">
                                                         <li><a href="blog-single-sidebar.html">Blog Single
                                                                 Sidebar</a>
@@ -346,7 +336,7 @@
 
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="images/mini-banner1.jpg" alt="#">
+                        <img src="https://wpthemesgrid.com/themes/free/eshop/images/mini-banner1.jpg" alt="#">
                         <div class="content">
                             <p>Man's Collectons</p>
                             <h3>Summer travel <br> collection</h3>
@@ -358,7 +348,7 @@
 
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="images/mini-banner2.jpg" alt="#">
+                        <img src="https://wpthemesgrid.com/themes/free/eshop/images/mini-banner2.jpg" alt="#">
                         <div class="content">
                             <p>Bag Collectons</p>
                             <h3>Awesome Bag <br> 2020</h3>
@@ -370,7 +360,7 @@
 
                 <div class="col-lg-4 col-12">
                     <div class="single-banner tab-height">
-                        <img src="images/mini-banner3.jpg" alt="#">
+                        <img src="https://wpthemesgrid.com/themes/free/eshop/images/mini-banner3.jpg" alt="#">
                         <div class="content">
                             <p>Flash Sale</p>
                             <h3>Mid Season <br> Up to <span>40%</span> Off</h3>
@@ -2597,6 +2587,19 @@
     </footer>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".cat-heading").click(function () {
+                $(".main-category").toggle();
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/5c95e5cc68.js" crossorigin="anonymous"></script>
     <script data-cfasync="false"
         src="https://wpthemesgrid.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://wpthemesgrid.com/themes/free/eshop/js/jquery.min.js"></script>
