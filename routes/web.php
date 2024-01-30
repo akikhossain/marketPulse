@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\WebController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Website route part
+
+Route::get('/',[WebController::class,'Website'])->name('website.home');
+
+
+//Backend route part
+  Route::get('/dashboard',[DashboardController::class,'Dashboard'])->name('dashboard.home');
