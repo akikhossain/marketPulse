@@ -11,10 +11,4 @@ class HomeController extends Controller
     {
         return view('Admin.Partial.dashboard');
     }
-
-
-    public function home()
-    {
-        return view('Frontend.master');
-    }
 }

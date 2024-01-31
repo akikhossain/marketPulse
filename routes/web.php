@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,12 @@ use App\Http\Controllers\Backend\DashboardController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/ 
+*/
 //Route for Website
 
-Route::get('/',[HomeController::class, 'home'])->name('home');
+Route::get('/', [FrontendHomeController::class, 'home'])->name('home');
 
 
 //Route for Admin
 
-Route::get('/dashboard',[HomeController::class,'dashboard'])->name('dashboard.home');
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard.home');
