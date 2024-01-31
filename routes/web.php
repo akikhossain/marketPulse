@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Frontend\WebController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Frontend\WebController;
+use App\Http\Controllers\Backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
+//Route for Website
 
-//Website route part
-
-Route::get('/',[WebController::class,'Website'])->name('website.home');
+Route::get('/',[HomeController::class, 'home'])->name('home');
 
 
-//Backend route part
-  Route::get('/dashboard',[DashboardController::class,'Dashboard'])->name('dashboard.home');
+//Route for Admin
+
+Route::get('/dashboard',[HomeController::class,'dashboard'])->name('dashboard.home');
