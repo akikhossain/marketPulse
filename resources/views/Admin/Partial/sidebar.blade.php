@@ -47,7 +47,7 @@
                     </a>
                     <ul class="cat-sub-menu">
                         <li>
-                            <a href="categories.html">All categories</a>
+                            <a href="{{route('category.list')}}">All categories</a>
                         </li>
                     </ul>
                 </li>
