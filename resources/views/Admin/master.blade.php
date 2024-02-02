@@ -22,12 +22,12 @@
         @include('Admin.partial.sidebar')
 
         <div class="main-wrapper">
-            <!-- ! Main nav -->
+        
             @include('Admin.partial.navbar')
-
-            <!-- ! Main -->
+ 
+            
             @yield('content')
-            <!-- ! Footer -->
+    
             @include('Admin.partial.footer')
 
         </div>
