@@ -1,157 +1,111 @@
-<aside class="sidebar">
-    <div class="sidebar-start">
-        <div class="sidebar-head">
-            <a href="/" class="logo-wrapper" title="Home">
-                <span class="sr-only">Home</span>
-                <span class="icon logo" aria-hidden="true"></span>
-                <div class="logo-text">
-                    <span class="logo-title">MarketPulse</span>
-                    <span class="logo-subtitle">Dashboard</span>
-                </div>
+<nav class="sidebar bg-primary-subtle">
+    <div class="logo d-flex justify-content-between">
+        <a href="{{ route('dashboard.home') }}"><img src="https://i.ibb.co/SKcF2x1/Screenshot-2024-02-04-003305.png"
+                alt></a>
+        <div class="sidebar_close_icon d-lg-none">
+            <i class="ti-close"></i>
+        </div>
+    </div>
+    <ul id="sidebar_menu">
+        <li class="mm-active">
+            <a class="has-arrow" href="#" aria-expanded="false">
 
+                <img src="img/menu-icon/1.svg" alt>
+                <span>Dashboard</span>
             </a>
-            <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
-                <span class="sr-only">Toggle menu</span>
-                <span class="icon menu-toggle" aria-hidden="true"></span>
-            </button>
-        </div>
-        <div class="sidebar-body">
-            <ul class="sidebar-body-menu">
-                <li>
-                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon document" aria-hidden="true"></span>Posts
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="posts.html">All Posts</a>
-                        </li>
-                        <li>
-                            <a href="new-post.html">Add new post</a>
-                        </li>
+            <ul>
+                <li><a class="active" href="{{ route('category.form') }}">Classic</a></li>
+                <li><a href="index_2.html">Minimal</a></li>
+            </ul>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/2.svg" alt>
+                <span>Pages</span>
+            </a>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="resister.html">Register</a></li>
+                <li><a href="forgot_pass.html">Forgot Password</a></li>
+            </ul>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/3.svg" alt>
+                <span>Applications</span>
+            </a>
+            <ul>
+                <li><a href="mail_box.html">Mail Box</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/4.svg" alt>
+                <span>UI Component</span>
+            </a>
+            <ul>
+                <li><a href="#">Elements</a>
+                    <ul>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="dropdown.html">Dropdowns</a></li>
+                        <li><a href="Badges.html">Badges</a></li>
+                        <li><a href="Loading_Indicators.html">Loading Indicators</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon folder" aria-hidden="true"></span>Categories
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="{{route('category.list')}}">All categories</a>
-                        </li>
+                <li><a href="#">Components</a>
+                    <ul>
+                        <li><a href="notification.html">Notifications</a></li>
+                        <li><a href="progress.html">Progress Bar</a></li>
+                        <li><a href="carousel.html">Carousel</a></li>
+                        <li><a href="cards.html">cards</a></li>
+                        <li><a href="Pagination.html">Pagination</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon image" aria-hidden="true"></span>Media
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="media-01.html">Media-01</a>
-                        </li>
-                        <li>
-                            <a href="media-02.html">Media-02</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Pages
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="pages.html">All pages</a>
-                        </li>
-                        <li>
-                            <a href="new-page.html">Add new page</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="comments.html">
-                        <span class="icon message" aria-hidden="true"></span>
-                        Comments
-                    </a>
-                    <span class="msg-counter">7</span>
                 </li>
             </ul>
-            <span class="system-menu__title">system</span>
-            <ul class="sidebar-body-menu">
-                <li>
-                    <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Appearance</a>
-                </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon category" aria-hidden="true"></span>Extentions
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="extention-01.html">Extentions-01</a>
-                        </li>
-                        <li>
-                            <a href="extention-02.html">Extentions-02</a>
-                        </li>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/5.svg" alt>
+                <span>Widgets</span>
+            </a>
+            <ul>
+                <li><a href="chart_box_1.html">Chart Boxes 1</a></li>
+                <li><a href="profilebox.html">Profile Box</a></li>
+            </ul>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/6.svg" alt>
+                <span>Forms</span>
+            </a>
+            <ul>
+                <li><a href="#">Elements</a>
+                    <ul>
+                        <li><a href="data_table.html">Data Tables</a></li>
+                        <li><a href="bootstrap_table.html">Grid Tables</a></li>
+                        <li><a href="datepicker.html">Date Picker</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a class="show-cat-btn" href="##">
-                        <span class="icon user-3" aria-hidden="true"></span>Users
-                        <span class="category__btn transparent-btn" title="Open list">
-                            <span class="sr-only">Open list</span>
-                            <span class="icon arrow-down" aria-hidden="true"></span>
-                        </span>
-                    </a>
-                    <ul class="cat-sub-menu">
-                        <li>
-                            <a href="users-01.html">Users-01</a>
-                        </li>
-                        <li>
-                            <a href="users-02.html">Users-02</a>
-                        </li>
+                <li><a href="#">Widgets</a>
+                    <ul>
+                        <li><a href="Input_Selects.html">Input Selects</a></li>
+                        <li><a href="Input_Mask.html">Input Mask</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="##"><span class="icon setting" aria-hidden="true"></span>Settings</a>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="sidebar-footer">
-        <a href="##" class="sidebar-user">
-            <span class="sidebar-user-img">
-                <picture>
-                    <source srcset="https://themewagon.github.io/elegant/img/avatar/avatar-illustrated-01.webp"
-                        type="image/webp"><img
-                        src="https://themewagon.github.io/elegant/img/avatar/avatar-illustrated-01.webp"
-                        alt="User name">
-                </picture>
-            </span>
-            <div class="sidebar-user-info">
-                <span class="sidebar-user__title">Nafisa Sh.</span>
-                <span class="sidebar-user__subtitle">Support manager</span>
-            </div>
-        </a>
-    </div>
-</aside>
+        </li>
+        <li class>
+            <a class="has-arrow" href="#" aria-expanded="false">
+                <img src="img/menu-icon/7.svg" alt>
+                <span>Charts</span>
+            </a>
+            <ul>
+                <li><a href="chartjs.html">ChartJS</a></li>
+                <li><a href="apex_chart.html">Apex Charts</a></li>
+                <li><a href="chart_sparkline.html">chart sparkline</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
