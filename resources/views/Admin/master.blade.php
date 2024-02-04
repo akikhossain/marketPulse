@@ -58,7 +58,9 @@
 
     @yield('content')
 
+    {{-- @include('Admin.Partial.footer') --}}
 
+    <script src="https://kit.fontawesome.com/5c95e5cc68.js" crossorigin="anonymous"></script>
     <script src="https://demo.dashboardpack.com/finance-html/js/jquery1-3.4.1.min.js"></script>
 
     <script src="https://demo.dashboardpack.com/finance-html/js/popper1.min.js"></script>

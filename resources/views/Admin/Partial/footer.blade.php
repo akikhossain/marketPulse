@@ -1,16 +1,11 @@
-<footer class="footer">
-    <div class="container footer--flex">
-        <div class="footer-start">
-            <p>2024 © MarketPulse - <a href="https://themewagon.github.io/elegant/elegant-dashboard.com" target="_blank"
-                    rel="noopener noreferrer">elegant-dashboard.com</a></p><br>
-            <p>Distributed by - <a href="https://themewagon.com/" target="_blank" rel="noopener noreferrer">Akik Hossain
-                    &
-                    Hasib Reja</a></p>
+<div class="footer_part">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="footer_iner text-center">
+                    <p>2020 © Influence - Designed by<a href="#"> Dashboard</a></p>
+                </div>
+            </div>
         </div>
-        <ul class="footer-end">
-            <li><a href="##">About</a></li>
-            <li><a href="##">Support</a></li>
-            <li><a href="##">Puchase</a></li>
-        </ul>
     </div>
-</footer>
+</div>

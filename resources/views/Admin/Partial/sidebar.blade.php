@@ -1,4 +1,4 @@
-<nav class="sidebar bg-primary-subtle">
+<nav class="sidebar bg-primary-subtle ">
     <div class="logo d-flex justify-content-between">
         <a href="{{ route('dashboard.home') }}"><img src="https://i.ibb.co/SKcF2x1/Screenshot-2024-02-04-003305.png"
                 alt></a>
@@ -7,30 +7,30 @@
         </div>
     </div>
     <ul id="sidebar_menu">
-        <li class="mm-active">
-            <a class="has-arrow" href="#" aria-expanded="false">
-
-                <img src="img/menu-icon/1.svg" alt>
+        <li class="">
+            <a class="text-decoration-none" href="#" aria-expanded="false">
+                <i class="fa-solid fa-house fs-5"></i>
                 <span>Dashboard</span>
             </a>
-            <ul>
+            {{-- <ul>
                 <li><a class="active" href="{{ route('category.form') }}">Classic</a></li>
                 <li><a href="index_2.html">Minimal</a></li>
-            </ul>
+            </ul> --}}
         </li>
         <li class>
-            <a class="has-arrow" href="#" aria-expanded="false">
-                <img src="img/menu-icon/2.svg" alt>
-                <span>Pages</span>
+            <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
+                <i class="fa-solid fa-list"></i>
+                <span>Category</span>
             </a>
             <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="resister.html">Register</a></li>
-                <li><a href="forgot_pass.html">Forgot Password</a></li>
+                <li><a class="text-decoration-none" href="{{ route('category.form') }}"><i
+                            class="fa-solid fa-plus"></i>Add Category</a></li>
+                <li><a class="text-decoration-none" href="{{ route('category.list') }}"><i
+                            class="fa-solid fa-list-ol"></i>Category List</a></li>
             </ul>
         </li>
         <li class>
-            <a class="has-arrow" href="#" aria-expanded="false">
+            <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
                 <img src="img/menu-icon/3.svg" alt>
                 <span>Applications</span>
             </a>
