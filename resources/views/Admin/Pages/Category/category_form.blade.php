@@ -18,26 +18,26 @@
                 class="text-white text-decoration-none" href="{{ route('category.list') }}">Category List</a></button>
     </div> --}}
     <div class="w-50 mx-auto mt-5">
-        <form action="" method="post">
+        <form action="{{ route('category.store') }}" method="post">
             @csrf
             <!-- Text input -->
             <div data-mdb-input-init class="form-outline mb-4">
-                <input name="name" type="text" id="form6Example3" class="form-control mb-2" />
+                <input name="category_name" required type="text" id="form6Example3" class="form-control mb-2" />
                 <label class="form-label" for="form6Example3">Category Name</label>
             </div>
 
             <!-- Message input -->
             <div data-mdb-input-init class="form-outline mb-4">
-                <textarea name="description" class="form-control mb-2" id="form6Example7" rows="4"></textarea>
+                <textarea name="description" required class="form-control mb-2" id="form6Example7" rows="4"></textarea>
                 <label class="form-label" for="form6Example7">Additional Information</label>
             </div>
 
             <!-- Submit button -->
             <div class="mx-auto w-25">
-                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Create</button>
+                <button data-mdb-ripple-init type="submit"
+                    class="bg-primary text-white px-3 py-2 rounded-pill">Create</button>
             </div>
         </form>
     </div>
 </section>
-
 @endsection
