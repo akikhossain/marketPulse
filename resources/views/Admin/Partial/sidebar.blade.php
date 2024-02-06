@@ -10,7 +10,6 @@
         <li class="mm-active">
             <a class="has-arrow" href="#" aria-expanded="false">
 
-                <img src="img/menu-icon/1.svg" alt>
                 <span>Dashboard</span>
             </a>
             <ul>
@@ -18,6 +17,7 @@
                 <li><a href="index_2.html">Minimal</a></li>
             </ul>
         </li>
+        
         <li class>
             <a class="has-arrow" href="#" aria-expanded="false">
                 <img src="img/menu-icon/2.svg" alt>
