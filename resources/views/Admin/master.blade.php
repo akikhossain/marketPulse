@@ -47,10 +47,21 @@
     <link rel="stylesheet" href="https://demo.dashboardpack.com/finance-html/css/colors/default.css" id="colorSkinCSS">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    @notifyCss
+
+    <style>
+        .notify {
+            z-index: 9999;
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body class="crm_body_bg">
 
+    @include('notify::components.notify')
     @include('Admin.Partial.navbar')
 
     @include('Admin.Partial.sidebar')
@@ -60,6 +71,8 @@
 
     {{-- @include('Admin.Partial.footer') --}}
 
+
+    @notifyJs
     <script src="https://kit.fontawesome.com/5c95e5cc68.js" crossorigin="anonymous"></script>
     <script src="https://demo.dashboardpack.com/finance-html/js/jquery1-3.4.1.min.js"></script>
 

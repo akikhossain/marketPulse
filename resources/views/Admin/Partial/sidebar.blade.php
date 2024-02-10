@@ -7,8 +7,11 @@
         </div>
     </div>
     <ul id="sidebar_menu">
+        <li class="mm-active">
+            <a class="has-arrow" href="#" aria-expanded="false">
+
         <li class="">
-            <a class="text-decoration-none" href="#" aria-expanded="false">
+            <a class="text-decoration-none" href="{{ route('dashboard.home') }}" aria-expanded="false">
                 <i class="fa-solid fa-house fs-5"></i>
                 <span>Dashboard</span>
             </a>
@@ -17,9 +20,10 @@
                 <li><a href="index_2.html">Minimal</a></li>
             </ul> --}}
         </li>
+        
         <li class>
             <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
-                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-list   fs-5"></i>
                 <span>Category</span>
             </a>
             <ul>
@@ -31,8 +35,8 @@
         </li>
         <li class>
             <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
-                <img src="img/menu-icon/3.svg" alt>
-                <span>Applications</span>
+                <i class="fa-solid fa-box   fs-5"></i>
+                <span>Products</span>
             </a>
             <ul>
                 <li><a href="mail_box.html">Mail Box</a></li>

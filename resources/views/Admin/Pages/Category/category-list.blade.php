@@ -20,8 +20,7 @@
                                     </div>
                                 </div>
                                 <div class="add_button ms-2">
-                                    <a href="{{ route('category.form') }}" data-bs-toggle="modal"
-                                        data-bs-target="#addcategory" class="btn_1">Add
+                                    <a href="{{ route('category.form') }}" class="btn_1 text-decoration-none ">Add
                                         New</a>
                                 </div>
                             </div>
@@ -38,12 +37,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($categories as $key => $category)
+
                                     <tr>
-                                        <td>ID</td>
-                                        <td>Category name</td>
-                                        <td>Category Description</td>
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{ $category->category_name }}</td>
+                                        <td>{{ $category->description }}</td>
                                         <td><a href="#" class="status_btn">Active</a></td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
