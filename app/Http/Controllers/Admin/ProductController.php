@@ -56,9 +56,7 @@ class ProductController extends Controller
             'product_description' => $request->product_description,
             'image1' => $fileName
         ]);
-        notify()->success('Product created Successfull!');
+        notify()->success('Product created Successfully!');
         return redirect()->back();
     }
 }
- 
- 
