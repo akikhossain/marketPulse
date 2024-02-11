@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -15,19 +16,21 @@ class ProductController extends Controller
 
     {
         $categories = Category::all();
-        return view('Admin.Pages.Product.product_form', compact('categories'));
+        $brands = Brand::all();
+        return view('Admin.Pages.Product.product_form', compact('categories','brands'));
     }
 
     public function viewList()
     {
         $products = Product::with('category');
-        return view('Admin.Pages.Product.product_list', compact('products'));
+        $brands = Product::with('brand');
+        return view('Admin.Pages.Product.product_list', compact('products','brands'));
     }
 
     public function store(Request $request)
 
     {
-        dd($request->all());
+        // dd($request->all());
 
         $validate = validator::make($request->all(), []);
 

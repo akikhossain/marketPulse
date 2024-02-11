@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
@@ -33,3 +34,9 @@ Route::post('/category/store', [CategoryController::class, 'store'])->name('cate
 Route::get('/product/form', [ProductController::class, 'createForm'])->name('product.form');
 Route::get('/product/list', [ProductController::class, 'viewList'])->name('product.list');
 Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
+
+Route::get('/brand/form', [BrandController::class, 'createForm'])->name('brand.form');
+Route::get('/brand/list', [BrandController::class, 'viewList'])->name('brand.list');
+Route::post('/brand/store', [BrandController::class, 'store'])->name('brand.store');
+
+
