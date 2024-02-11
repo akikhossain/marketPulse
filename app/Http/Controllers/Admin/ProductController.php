@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
+
 class ProductController extends Controller
 {
     public function createForm()
@@ -59,3 +60,5 @@ class ProductController extends Controller
         return redirect()->back();
     }
 }
+ 
+ 
