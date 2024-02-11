@@ -1,85 +1,61 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function createForm()
+
     {
-        //
+        $categories = Category::all();
+        return view('Admin.Pages.Product.product_form', compact('categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function viewList()
     {
-        //
+        $products = Product::with('category');
+        return view('Admin.Pages.Product.product_list', compact('products'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
     {
-        //
-    }
+        dd($request->all());
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
-    {
-        //
-    }
+        $validate = validator::make($request->all(), []);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
-    {
-        //
-    }
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate);
+        }
+        //for file or image handling
+        $fileName = null;
+        if ($request->hasFile('image1')) {
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-        //
+            $file = $request->file('image1');
+            $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
+            $file->storeAs('/uploads', $fileName);
+        }
+
+        //  dd($request->all());
+        Product::create([
+            'product_name' => $request->product_name,
+            'category_id' => $request->category_id,
+            'brand' => $request->brand_id,
+            'image1' => $request->image1,
+            'image2' => $request->image2,
+            'image3' => $request->image3,
+            'price' => $request->price,
+            'quantity_in_stock' => $request->quantity_in_stock,
+            'product_description' => $request->product_description,
+            'image1' => $fileName
+        ]);
+        notify()->success('Product created Successfull!');
+        return redirect()->back();
     }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
@@ -25,10 +26,10 @@ Route::get('/', [FrontendHomeController::class, 'home'])->name('home');
 //Route for Admin
 
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard.home');
-
-// Category route
 Route::get('/category/list', [CategoryController::class, 'viewList'])->name('category.list');
 Route::get('/category/form', [CategoryController::class, 'createForm'])->name('category.form');
 Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
 
-// Products Route
+Route::get('/product/form', [ProductController::class, 'createForm'])->name('product.form');
+Route::get('/product/list', [ProductController::class, 'viewList'])->name('product.list');
+Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
