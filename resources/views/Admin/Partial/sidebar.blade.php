@@ -8,7 +8,6 @@
     </div>
     <ul id="sidebar_menu">
         <li class="mm-active">
-            <a class="has-arrow" href="#" aria-expanded="false">
 
         <li class="">
             <a class="text-decoration-none" href="{{ route('dashboard.home') }}" aria-expanded="false">
@@ -35,13 +34,14 @@
         </li>
         <li class>
             <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
-                <i class="fa-solid fa-box   fs-5"></i>
-                <span>Products</span>
+                <i class="fa-solid fa-list   fs-5"></i>
+                <span>Product</span>
             </a>
             <ul>
-                <li><a href="mail_box.html">Mail Box</a></li>
-                <li><a href="chat.html">Chat</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a class="text-decoration-none" href="{{route('product.form')}}"><i
+                            class="fa-solid fa-plus"></i>Add Product</a></li>
+                <li><a class="text-decoration-none" href="{{route('product.list')}}"><i
+                            class="fa-solid fa-list-ol"></i>Product List</a></li>
             </ul>
         </li>
         <li class>

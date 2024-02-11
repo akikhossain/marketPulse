@@ -21,6 +21,7 @@ class CategoryController extends Controller
         return view('Admin.Pages.Category.category_form');
     }
 
+    
     public function store(Request $request)
     {
         // dd($request->all());
