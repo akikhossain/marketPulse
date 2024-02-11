@@ -38,8 +38,8 @@
                 <div class="form-group col-md-6">
                     <label for="productName">Select Brand</label>
                     <select class="form-control mb-4 " name="brand_id" required>
-                        @foreach ($categories as $category )
-                        <option value="{{$category->id}}">{{$category->category_name}}</option>
+                        @foreach ($brands as $brand )
+                        <option value="{{$brand->id}}">{{$brand->brand_name}}</option>
                         @endforeach
                     </select>
                 </div>

@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <div class="QA_section">
                         <div class="white_box_tittle list_header">
-                            <h4>Product List</h4>
+                            <h4>Brand List</h4>
                             <div class="box_right d-flex lms_block">
                                 <div class="serach_field_2">
                                     <div class="search_inner">
@@ -15,12 +15,12 @@
                                             <div class="search_field">
                                                 <input type="text" placeholder="Search content here...">
                                             </div>
-                                            <button type="submit"> <i class="ti-search"></i> </button>
+                                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="add_button ms-2">
-                                    <a href="{{ route('product.form') }}" class="btn_1 text-decoration-none ">Add
+                                    <a href="{{ route('brand.form') }}" class="btn_1 text-decoration-none ">Add
                                         New</a>
                                 </div>
                             </div>
@@ -31,31 +31,20 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#ID</th>
-                                        <th scope="col">Product Name</th>
-                                        <th scope="col">Category </th>
-                                        <th scope="col">Brand </th>
-                                        <th scope="col">Image1 </th>
-                                        <th scope="col">Image2 </th>
-                                        <th scope="col">Image3 </th>
-                                        <th scope="col">Price </th>
-                                        <th scope="col">Quantity </th>
-                                        <th scope="col">Description </th>
+                                        <th scope="col">Brand Name</th>
+                                        <th scope="col">Brand Image</th>
+                                        <th scope="col">Category Description</th>
                                         <th scope="col">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($products as $key => $product)
+                                    @foreach ($brands as $key => $brand)
+
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $product->product_name }}</td>
-                                        <td>{{ $product->category_id}}</td>
-                                        <td>{{ $product->brand_id}}</td>
-                                        <td>{{ $product->image1}}</td>
-                                        <td>{{ $product->image2}}</td>
-                                        <td>{{ $product->image3}}</td>
-                                        <td>{{ $product->price}}</td>
-                                        <td>{{ $product->quantity_in_stock}}</td>
-                                        <td>{{ $product->product_description}}</td>
+                                        <td>{{ $brand->brand_name }}</td>
+                                        <td>{{ $brand->brand_image }}</td>
+                                        <td>{{ $brand->description }}</td>
                                         <td><a href="#" class="status_btn">Active</a></td>
                                     </tr>
                                     @endforeach
