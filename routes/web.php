@@ -25,6 +25,10 @@ Route::get('/', [FrontendHomeController::class, 'home'])->name('home');
 //Route for Admin
 
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard.home');
-Route::get('/category/list',[CategoryController::class,'viewList'])->name('category.list');
-Route::get('/category/form',[CategoryController::class,'createForm'])->name('category.form');
-Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+
+// Category route
+Route::get('/category/list', [CategoryController::class, 'viewList'])->name('category.list');
+Route::get('/category/form', [CategoryController::class, 'createForm'])->name('category.form');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+
+// Products Route

@@ -20,7 +20,7 @@
                 <li><a href="index_2.html">Minimal</a></li>
             </ul> --}}
         </li>
-        
+
         <li class>
             <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
                 <i class="fa-solid fa-list   fs-5"></i>

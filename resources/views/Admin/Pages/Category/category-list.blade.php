@@ -15,7 +15,7 @@
                                             <div class="search_field">
                                                 <input type="text" placeholder="Search content here...">
                                             </div>
-                                            <button type="submit"> <i class="ti-search"></i> </button>
+                                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         </form>
                                     </div>
                                 </div>
