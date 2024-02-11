@@ -23,17 +23,15 @@ class ProductController extends Controller
     }
 
     public function store(Request $request)
-         
     {
         dd($request->all());
-    
-    $validate = validator::make($request->all(), [
-     
+        $validate = validator::make($request->all(), [
     ]);
 
     if ($validate->fails()) {
       return redirect()->back()->withErrors($validate);
     }
+
     //for file or image handling
     $fileName = null;
     if ($request->hasFile('image1')) {
