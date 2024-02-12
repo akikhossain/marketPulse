@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();
             $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
-            $table->string('brand');
+            $table->foreignId('brand_id');
             $table->decimal('price', 8, 2);
             $table->integer('quantity_in_stock')->default(0);
             $table->enum('status', ['active', 'out_of_stock', 'discontinued'])->default('active');

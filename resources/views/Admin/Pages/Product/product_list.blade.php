@@ -33,13 +33,13 @@
                                         <th scope="col">#ID</th>
                                         <th scope="col">Product Name</th>
                                         <th scope="col">Category </th>
-                                        <th scope="col">Brand </th>
+                                        <th scope="col">Brand</th>
                                         <th scope="col">Image1 </th>
                                         <th scope="col">Image2 </th>
                                         <th scope="col">Image3 </th>
                                         <th scope="col">Price </th>
                                         <th scope="col">Quantity </th>
-                                        <th scope="col">Description </th>
+                                        <th scope="col">Description</th>
                                         <th scope="col">Status</th>
                                     </tr>
                                 </thead>
@@ -48,11 +48,15 @@
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $product->product_name }}</td>
-                                        <td>{{ $product->category_id}}</td>
-                                        <td>{{ $product->brand_id}}</td>
-                                        <td>{{ $product->image1}}</td>
-                                        <td>{{ $product->image2}}</td>
-                                        <td>{{ $product->image3}}</td>
+                                        <td>{{ $product->category->category_name}}</td>
+                                        <td>{{ $product->brand->brand_name}}</td>
+                                        <td><img class="p-1" style="width: 100px; height: 100px;"
+                                                src="{{ url('/uploads//' . $product->image1) }}" alt=""></td>
+                                        <td><img class="p-1" style="width: 100px; height: 100px;"
+                                                src="{{ url('/uploads//' . $product->image2) }}" alt=""></td>
+                                        <td><img class="p-1" style="width: 100px; height: 100px;"
+                                                src="{{ url('/uploads//' . $product->image3) }}" alt=""></td>
+
                                         <td>{{ $product->price}}</td>
                                         <td>{{ $product->quantity_in_stock}}</td>
                                         <td>{{ $product->product_description}}</td>

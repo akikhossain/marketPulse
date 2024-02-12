@@ -17,14 +17,21 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $brands = Brand::all();
-        return view('Admin.Pages.Product.product_form', compact('categories','brands'));
+        return view('Admin.Pages.Product.product_form', compact('categories', 'brands'));
     }
+
+    // public function viewList()
+    // {
+    //     $products = Product::with('category');
+    //     $brands = Product::with('brand');
+    //     return view('Admin.Pages.Product.product_list', compact('products','brands'));
+    // }
+
 
     public function viewList()
     {
-        $products = Product::with('category');
-        $brands = Product::with('brand');
-        return view('Admin.Pages.Product.product_list', compact('products','brands'));
+        $products = Product::with('category', 'brand')->get();
+        return view('Admin.Pages.Product.product_list', compact('products'));
     }
 
     public function store(Request $request)
@@ -38,26 +45,26 @@ class ProductController extends Controller
             return redirect()->back()->withErrors($validate);
         }
         //for file or image handling
-        $fileName = null;
-        if ($request->hasFile('image1')) {
+        $images = $request->file('images');
 
-            $file = $request->file('image1');
-            $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('/uploads', $fileName);
+        $fileNames = [];
+
+        foreach ($images as $key => $image) {
+            $fileName = date('Ymdhis') . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->storeAs('/uploads', $fileName);
+            $fileNames[] = $fileName;
         }
 
-        //  dd($request->all());
         Product::create([
             'product_name' => $request->product_name,
             'category_id' => $request->category_id,
-            'brand' => $request->brand_id,
-            'image1' => $request->image1,
-            'image2' => $request->image2,
-            'image3' => $request->image3,
+            'brand_id' => $request->brand_id,
             'price' => $request->price,
             'quantity_in_stock' => $request->quantity_in_stock,
             'product_description' => $request->product_description,
-            'image1' => $fileName
+            'image1' => $fileNames[0] ?? null,
+            'image2' => $fileNames[1] ?? null,
+            'image3' => $fileNames[2] ?? null,
         ]);
         notify()->success('Product created Successfully!');
         return redirect()->back();
