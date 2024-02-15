@@ -19,7 +19,7 @@
                 <li><a href="index_2.html">Minimal</a></li>
             </ul> --}}
         </li>
-        
+
         <li class>
             <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
                 <i class="fa-solid fa-list   fs-5"></i>
@@ -30,6 +30,18 @@
                             class="fa-solid fa-plus"></i>Add Category</a></li>
                 <li><a class="text-decoration-none" href="{{ route('category.list') }}"><i
                             class="fa-solid fa-list-ol"></i>Category List</a></li>
+            </ul>
+        </li>
+        <li class>
+            <a class="has-arrow text-decoration-none" href="#" aria-expanded="false">
+                <i class="fa-solid fa-list   fs-5"></i>
+                <span>Brand</span>
+            </a>
+            <ul>
+                <li><a class="text-decoration-none" href="{{route('brand.form')}}"><i
+                            class="fa-solid fa-plus"></i>Add Brand</a></li>
+                <li><a class="text-decoration-none" href="{{route('brand.list')}}"><i
+                            class="fa-solid fa-list-ol"></i>Brand List</a></li>
             </ul>
         </li>
         <li class>

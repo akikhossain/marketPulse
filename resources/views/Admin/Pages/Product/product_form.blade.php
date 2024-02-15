@@ -24,7 +24,8 @@
             <!-- Text input -->
             <div data-mdb-input-init class="form-outline mb-4 ">
                 <label class="form-label" for="form6Example3">Product Name</label>
-                <input name="product_name" required type="text" id="form6Example3" class="form-control mb-2" placeholder="Enter your product name" />
+                <input name="product_name" type="text" id="form6Example3" class="form-control mb-2"
+                    placeholder="Enter your product name" />
             </div>
             <div class="d-flex">
                 <div class="form-group col-md-6" style="margin-right: 5px;">
@@ -34,12 +35,12 @@
                         <option value="{{$category->id}}">{{$category->category_name}}</option>
                         @endforeach
                     </select>
-                </div> 
+                </div>
                 <div class="form-group col-md-6">
                     <label for="productName">Select Brand</label>
                     <select class="form-control mb-4 " name="brand_id" required>
-                        @foreach ($categories as $category )
-                        <option value="{{$category->id}}">{{$category->category_name}}</option>
+                        @foreach ($brands as $brand )
+                        <option value="{{$brand->id}}">{{$brand->brand_name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -48,22 +49,23 @@
             <div class="d-flex">
                 <div class="form-group col-md-6 mb-4" style="margin-right: 5px;">
                     <label for="productImage">Image1</label>
-                    <input type="file" class="form-control" id="productImage" name="image1" required>
+                    <input type="file" class="form-control" id="productImage" name="images[]" multiple>
                 </div>
                 <div class="form-group col-md-6 mb-4">
                     <label for="productImage">Image2</label>
-                    <input type="file" class="form-control" id="productImage" name="image2" required>
+                    <input type="file" class="form-control" id="productImage" name="images[]" multiple>
                 </div>
             </div>
 
             <div class="d-flex mb-4">
                 <div class="form-group col-md-6" style="margin-right: 5px;">
                     <label for="productImage">Image3</label>
-                    <input type="file" class="form-control" id="productImage" name="image3" required>
+                    <input type="file" class="form-control" id="productImage" name="images[]" multiple>
                 </div>
                 <div class="form-group col-md-6 ">
                     <label for="productPrice">Product Price</label>
-                    <input type="number" step="0.01" class="form-control" id="productPrice" name="price" placeholder="Enter product amount" required>
+                    <input type="number" step="0.01" class="form-control" id="productPrice" name="price"
+                        placeholder="Enter product amount" required>
                 </div>
             </div>
             <div class="d-flex mb-4">
@@ -75,7 +77,8 @@
             <!-- Message input -->
             <div data-mdb-input-init class="form-outline mb-4">
                 <label class="form-label" for="form6Example7">Additional Information</label>
-                <textarea name="product_description" required class="form-control mb-2" id="form6Example7" rows="4"></textarea>
+                <textarea name="product_description" required class="form-control mb-2" id="form6Example7"
+                    rows="4"></textarea>
             </div>
 
             <!-- Submit button -->
