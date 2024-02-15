@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
@@ -47,3 +48,12 @@ Route::get('/Employee/delete/{id}', [ProductController::class, 'productDelete'])
 Route::get('/brand/form', [BrandController::class, 'createForm'])->name('brand.form');
 Route::get('/brand/list', [BrandController::class, 'viewList'])->name('brand.list');
 Route::post('/brand/store', [BrandController::class, 'store'])->name('brand.store');
+
+
+
+//User Routes
+Route::get('/user/form',[UserController::class,'createForm'])->name('user.form');
+Route::get('/user/list',[UserController::class,'viewList'])->name('user.list');
+Route::post('/user/store',[UserController::class,'store'])->name('user.store');
+
+
