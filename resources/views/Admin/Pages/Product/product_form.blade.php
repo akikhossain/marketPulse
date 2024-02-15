@@ -24,7 +24,7 @@
             <!-- Text input -->
             <div data-mdb-input-init class="form-outline mb-4 ">
                 <label class="form-label" for="form6Example3">Product Name</label>
-                <input name="product_name" required type="text" id="form6Example3" class="form-control mb-2"
+                <input name="product_name" type="text" id="form6Example3" class="form-control mb-2"
                     placeholder="Enter your product name" />
             </div>
             <div class="d-flex">

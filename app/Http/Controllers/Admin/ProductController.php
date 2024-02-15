@@ -20,13 +20,6 @@ class ProductController extends Controller
         return view('Admin.Pages.Product.product_form', compact('categories', 'brands'));
     }
 
-    // public function viewList()
-    // {
-    //     $products = Product::with('category');
-    //     $brands = Product::with('brand');
-    //     return view('Admin.Pages.Product.product_list', compact('products','brands'));
-    // }
-
 
     public function viewList()
     {
@@ -39,10 +32,21 @@ class ProductController extends Controller
     {
         // dd($request->all());
 
-        $validate = validator::make($request->all(), []);
+        $rules = [
+            'product_name' => 'required',
+            'category_id' => 'required',
+            'brand_id' => 'required',
+            'price' => 'required|numeric',
+            'quantity_in_stock' => 'required|numeric',
+            'product_description' => 'required',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ];
 
-        if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate);
+        // Validate the request
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
         }
         //for file or image handling
         $images = $request->file('images');
@@ -67,6 +71,16 @@ class ProductController extends Controller
             'image3' => $fileNames[2] ?? null,
         ]);
         notify()->success('Product created Successfully!');
+        return redirect()->back();
+    }
+
+    public function productDelete($id)
+    {
+        $product = Product::find($id);
+        if ($product) {
+            $product->delete();
+        }
+        notify()->success('Deleted Successfully.');
         return redirect()->back();
     }
 }
