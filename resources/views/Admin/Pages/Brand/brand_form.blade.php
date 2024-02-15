@@ -7,7 +7,7 @@
         <div class="box_right d-flex lms_block">
 
             <div class="add_button ms-2">
-                <a href="" class="btn_1 text-decoration-none ">Brand List</a>
+                <a href="{{route('brand.list')}}" class="btn_1 text-decoration-none ">Brand List</a>
             </div>
         </div>
     </div>
